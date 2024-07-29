@@ -1,11 +1,42 @@
-# Sample Snack app
+# Sorting Visualizer
 
-Open the `App.js` file to start writing some code. You can preview the changes directly on your phone or tablet by scanning the **QR code** or use the iOS or Android emulators. When you're done, click **Save** and share the link!
+A dynamic visualization tool for popular sorting algorithms.
 
-When you're ready to see everything that Expo provides (or if you want to use your own editor) you can **Download** your project and use it with [expo cli](https://docs.expo.dev/get-started/installation/#expo-cli)).
+## Overview
 
-All projects created in Snack are publicly available, so you can easily share the link to this project via link, or embed it on a web page with the `<>` button.
+This project provides an interactive way to visualize how different sorting algorithms work. Watch in real-time as the algorithms rearrange data, giving you a deeper understanding of their mechanics and efficiency.
 
-If you're having problems, you can tweet to us [@expo](https://twitter.com/expo) or ask in our [forums](https://forums.expo.dev/c/expo-dev-tools/61) or [Discord](https://chat.expo.dev/).
+## Features
 
-Snack is Open Source. You can find the code on the [GitHub repo](https://github.com/expo/snack).
+- Visualize multiple sorting algorithms including Bubble Sort, Quick Sort, Merge Sort, etc.
+- Adjustable array size and sorting speed
+- Color-coded representation of array elements
+- Step-by-step visualization option
+
+## Getting Started
+
+1. Clone the repository
+2. Install dependencies with `npm install`
+3. Run the app with `npm start`
+4. Open the provided URL in your browser
+
+## Usage
+
+- Select a sorting algorithm from the dropdown menu
+- Adjust the array size and sorting speed as desired
+- Click 'Start' to begin the visualization
+- Use 'Reset' to generate a new random array
+
+## Contributing
+
+We welcome contributions! Please see our contributing guidelines for more details.
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Acknowledgments
+
+- Inspired by [mention any inspirations or resources]
+- Built with [list key technologies or frameworks used]
+

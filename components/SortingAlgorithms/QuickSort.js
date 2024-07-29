@@ -86,7 +86,6 @@ const QuickSort = () => {
         >
           <Text style={{ color: '#ffffff', fontSize: 16, fontWeight: 'bold' }}>Reset</Text>
         </TouchableOpacity>
-
       </View>
     </View>
   );
