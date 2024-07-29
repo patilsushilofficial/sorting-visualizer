@@ -27,7 +27,6 @@ export default function App() {
     { key: 'third', title: 'Insertion Sort' },
     { key: 'fourth', title: 'Merge Sort' },
     { key: 'fifth', title: 'Quick Sort' },
-    { key: 'fifth', title: 'Quick Sort' },
   ]);
 
 

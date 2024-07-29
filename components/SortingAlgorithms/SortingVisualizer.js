@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
 
-const BAR_WIDTH = 10;
+const BAR_WIDTH = 20;
 
 const SortingVisualizer = ({ array }) => {
   return (
@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
     alignItems: 'flex-end',
-    height: 300,
+    height: 550,
     marginVertical: 20,
   },
   bar: {

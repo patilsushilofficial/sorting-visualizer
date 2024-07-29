@@ -1,10 +1,14 @@
 import React, { useState } from 'react';
-import { View, Text, Button } from 'react-native';
+import { View, Text, TouchableOpacity} from 'react-native';
 import SortingVisualizer from './SortingVisualizer';
 
 const QuickSort = () => {
   const [array, setArray] = useState([30, 10, 50, 20, 60, 40]);
   const [sorting, setSorting] = useState(false);
+
+  const resetArray = () => {
+    setArray([30, 10, 50, 20, 60, 40]);
+  };
 
   const quickSort = async (arr, left = 0, right = arr.length - 1) => {
     if (left < right) {
@@ -40,11 +44,39 @@ const QuickSort = () => {
   };
 
   return (
-    <View style={{ marginVertical: 20, alignItems: 'center' }}>
+    <View style={{ margin: 20, alignItems: 'center' }}>
       <Text style={{ fontWeight: 'bold', fontSize: 18 }}>Quick Sort</Text>
       <Text>Quick Sort is an efficient, in-place, comparison-based, divide and conquer sorting algorithm. It is one of the most commonly used sorting algorithms due to its average case performance.</Text>
       <SortingVisualizer array={array} />
-      <Button title="Sort" onPress={handleSort} disabled={sorting} />
+      <View style={{ flexDirection: 'row', justifyContent: 'space-around', width: '100%', marginTop: 20 }}>
+        <TouchableOpacity
+          style={{
+            backgroundColor: '#4CAF50',
+            padding: 15,
+            borderRadius: 10,
+            width: 150,
+            alignItems: 'center'
+          }}
+          onPress={handleSort}
+          disabled={sorting}
+        >
+          <Text style={{ color: '#ffffff', fontSize: 16, fontWeight: 'bold' }}>Sort</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          style={{
+            backgroundColor: '#2196F3',
+            padding: 15,
+            borderRadius: 10,
+            width: 150,
+            alignItems: 'center'
+          }}
+          onPress={resetArray}
+          disabled={sorting}
+        >
+          <Text style={{ color: '#ffffff', fontSize: 16, fontWeight: 'bold' }}>Reset</Text>
+        </TouchableOpacity>
+      </View>
     </View>
   );
 };
