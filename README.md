@@ -28,7 +28,7 @@ Experience the magic of sorting algorithms come to life! This interactive projec
 
 1. Choose your preferred sorting algorithm from the dropdown menu
 2. Adjust array size and sorting speed to your liking
-3. Hit 'Start' and watch the visualization begin!
+3. Hit 'Sort' and watch the visualization begin!
 4. Use 'Reset' to generate a fresh random array and start over
 
 ## 🤝 Contributing
