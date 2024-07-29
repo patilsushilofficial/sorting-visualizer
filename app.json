@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "sorting-visualizer",
+    "name": "Sorter",
     "slug": "snack-00719d8e-80d3-4a77-be67-af8baa6bd86e",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -18,7 +18,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.sushilPatil.sortingVisualizer"
     },
     "web": {
       "favicon": "./assets/favicon.png"
