@@ -1,0 +1,1 @@
+export const defaultArray = [30, 10, 50, 20, 60, 40, 90, 11, 13];

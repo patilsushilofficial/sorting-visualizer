@@ -3,11 +3,11 @@ import { View, Text, TouchableOpacity } from 'react-native';
 import SortingVisualizer from './SortingVisualizer';
 
 const SelectionSort = () => {
-  const [array, setArray] = useState([30, 10, 50, 20, 60, 40]);
+  const [array, setArray] = useState([30, 10, 50, 20, 60, 40, 90, 11, 13]);
   const [sorting, setSorting] = useState(false);
 
   const resetArray = () => {
-    setArray([30, 10, 50, 20, 60, 40]);
+    setArray([30, 10, 50, 20, 60, 40, 90, 11, 13]);
   };
 
   const selectionSort = async () => {
@@ -33,7 +33,16 @@ const SelectionSort = () => {
     <View style={{ margin: 20, alignItems: 'center' }}>
       <Text style={{ fontWeight: 'bold', fontSize: 18 }}>Selection Sort</Text>
       <Text>Selection Sort is a simple sorting algorithm that divides the input list into two parts: the sublist of items already sorted, which is built up from left to right at the front (left) of the list, and the sublist of items remaining to be sorted that occupy the rest of the list.</Text>
-      <SortingVisualizer array={array} />
+      <View style={{
+        borderWidth: 2,
+        borderColor: '#3498db',
+        borderRadius: 10,
+        padding: 15,
+        marginTop: 10,
+        alignItems: 'center'
+      }}>
+        <SortingVisualizer array={array} />
+      </View>
       <View style={{ flexDirection: 'row', justifyContent: 'space-around', width: '100%', marginTop: 20 }}>
         <TouchableOpacity
           style={{
@@ -51,17 +60,18 @@ const SelectionSort = () => {
 
         <TouchableOpacity
           style={{
-            backgroundColor: '#2196F3',
+            backgroundColor: sorting ? '#B0BEC5' : '#2196F3', // Change color when disabled
             padding: 15,
             borderRadius: 10,
             width: 150,
-            alignItems: 'center'
+            alignItems: 'center',
           }}
           onPress={resetArray}
           disabled={sorting}
         >
           <Text style={{ color: '#ffffff', fontSize: 16, fontWeight: 'bold' }}>Reset</Text>
         </TouchableOpacity>
+
       </View>
     </View>
   );

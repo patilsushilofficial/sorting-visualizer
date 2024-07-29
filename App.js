@@ -40,12 +40,14 @@ export default function App() {
       initialLayout={{ width: layout.width }}
       renderTabBar={props => (
         <TabBar
-          {...props}
-          scrollEnabled={true}
-          indicatorStyle={{ backgroundColor: 'white' }}
-          style={{ backgroundColor: 'teal' }}
-          labelStyle={{ color: 'white', fontWeight: 'bold' }}
-        />
+        {...props}
+        scrollEnabled={true}
+        indicatorStyle={{ backgroundColor: 'white' }}
+        style={{ backgroundColor: 'teal' }}
+        activeColor="white"
+        inactiveColor="lightgrey"
+        labelStyle={{ fontSize: 16, fontWeight: 'bold' }}
+      />
       )}
     />
     </SafeAreaView>
@@ -54,7 +56,8 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container: {
-    flex:1
+    flex:1,
+    backgroundColor: '#F0F4F8',
   },
   header: {
     fontSize: 24,

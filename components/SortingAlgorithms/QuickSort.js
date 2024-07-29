@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
-import { View, Text, TouchableOpacity} from 'react-native';
+import { View, Text, TouchableOpacity } from 'react-native';
 import SortingVisualizer from './SortingVisualizer';
+import { defaultArray } from '../common/constants';
 
 const QuickSort = () => {
-  const [array, setArray] = useState([30, 10, 50, 20, 60, 40]);
+  const [array, setArray] = useState(defaultArray);
   const [sorting, setSorting] = useState(false);
 
   const resetArray = () => {
-    setArray([30, 10, 50, 20, 60, 40]);
+    setArray(defaultArray);
   };
 
   const quickSort = async (arr, left = 0, right = arr.length - 1) => {
@@ -47,7 +48,16 @@ const QuickSort = () => {
     <View style={{ margin: 20, alignItems: 'center' }}>
       <Text style={{ fontWeight: 'bold', fontSize: 18 }}>Quick Sort</Text>
       <Text>Quick Sort is an efficient, in-place, comparison-based, divide and conquer sorting algorithm. It is one of the most commonly used sorting algorithms due to its average case performance.</Text>
-      <SortingVisualizer array={array} />
+      <View style={{
+        borderWidth: 2,
+        borderColor: '#3498db',
+        borderRadius: 10,
+        padding: 15,
+        marginTop: 10,
+        alignItems: 'center'
+      }}>
+        <SortingVisualizer array={array} />
+      </View>
       <View style={{ flexDirection: 'row', justifyContent: 'space-around', width: '100%', marginTop: 20 }}>
         <TouchableOpacity
           style={{
@@ -65,17 +75,18 @@ const QuickSort = () => {
 
         <TouchableOpacity
           style={{
-            backgroundColor: '#2196F3',
+            backgroundColor: sorting ? '#B0BEC5' : '#2196F3', // Change color when disabled
             padding: 15,
             borderRadius: 10,
             width: 150,
-            alignItems: 'center'
+            alignItems: 'center',
           }}
           onPress={resetArray}
           disabled={sorting}
         >
           <Text style={{ color: '#ffffff', fontSize: 16, fontWeight: 'bold' }}>Reset</Text>
         </TouchableOpacity>
+
       </View>
     </View>
   );

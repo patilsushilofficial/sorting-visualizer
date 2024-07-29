@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
 
-const BAR_WIDTH = 20;
+const BAR_WIDTH = 25;
 
 const SortingVisualizer = ({ array }) => {
   return (
@@ -11,7 +11,7 @@ const SortingVisualizer = ({ array }) => {
           key={index}
           style={{
             ...styles.bar,
-            height: value * 3, // scale height for better visualization
+            height: value * 5, // scale height for better visualization
             width: BAR_WIDTH,
           }}
         />

@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
-import { View, Text,TouchableOpacity } from 'react-native';
+import { View, Text, TouchableOpacity } from 'react-native';
 import SortingVisualizer from './SortingVisualizer';
-
+import { defaultArray } from '../common/constants';
 const MergeSort = () => {
-  const [array, setArray] = useState([30, 10, 50, 20, 60, 40]);
+  const [array, setArray] = useState(defaultArray);
   const [sorting, setSorting] = useState(false);
 
   const resetArray = () => {
-    setArray([30, 10, 50, 20, 60, 40]);
+    setArray(defaultArray);
   };
 
   const mergeSort = async (arr) => {
@@ -49,7 +49,16 @@ const MergeSort = () => {
     <View style={{ margin: 20, alignItems: 'center' }}>
       <Text style={{ fontWeight: 'bold', fontSize: 18 }}>Merge Sort</Text>
       <Text>Merge Sort is an efficient, stable, comparison-based, divide and conquer sorting algorithm. Most implementations produce a stable sort, meaning that the order of equal elements is the same in the input and output.</Text>
-      <SortingVisualizer array={array} />
+      <View style={{
+        borderWidth: 2,
+        borderColor: '#3498db',
+        borderRadius: 10,
+        padding: 15,
+        marginTop: 10,
+        alignItems: 'center'
+      }}>
+        <SortingVisualizer array={array} />
+      </View>
       <View style={{ flexDirection: 'row', justifyContent: 'space-around', width: '100%', marginTop: 20 }}>
         <TouchableOpacity
           style={{
@@ -67,17 +76,18 @@ const MergeSort = () => {
 
         <TouchableOpacity
           style={{
-            backgroundColor: '#2196F3',
+            backgroundColor: sorting ? '#B0BEC5' : '#2196F3', // Change color when disabled
             padding: 15,
             borderRadius: 10,
             width: 150,
-            alignItems: 'center'
+            alignItems: 'center',
           }}
           onPress={resetArray}
           disabled={sorting}
         >
           <Text style={{ color: '#ffffff', fontSize: 16, fontWeight: 'bold' }}>Reset</Text>
         </TouchableOpacity>
+
       </View>
     </View>
   );
