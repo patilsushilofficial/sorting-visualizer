@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
 import SortingVisualizer from './SortingVisualizer';
+import { defaultArray } from '../common/constants';
 
 const SelectionSort = () => {
-  const [array, setArray] = useState([30, 10, 50, 20, 60, 40, 90, 11, 13]);
+  const [array, setArray] = useState(defaultArray);
   const [sorting, setSorting] = useState(false);
 
   const resetArray = () => {
-    setArray([30, 10, 50, 20, 60, 40, 90, 11, 13]);
+    setArray(defaultArray);
   };
 
   const selectionSort = async () => {

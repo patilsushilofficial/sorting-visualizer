@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { View, Text, Button, TouchableOpacity } from 'react-native';
+import React, { useState,useCallback } from 'react';
+import { View, Text, TouchableOpacity } from 'react-native';
 import SortingVisualizer from './SortingVisualizer';
 import { defaultArray } from '../common/constants';
 
@@ -10,20 +10,24 @@ const BubbleSort = () => {
     setArray(defaultArray);
     setSorting(false);
   };
-  const bubbleSort = async () => {
+  const bubbleSort = useCallback(async () => {
     setSorting(true);
     const arr = [...array];
+    let swapped;
     for (let i = 0; i < arr.length - 1; i++) {
+      swapped = false;
       for (let j = 0; j < arr.length - 1 - i; j++) {
         if (arr[j] > arr[j + 1]) {
           [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
           setArray([...arr]);
           await new Promise((resolve) => setTimeout(resolve, 500));
+          swapped = true;
         }
       }
+      if (!swapped) break;
     }
     setSorting(false);
-  };
+  }, [array]);
 
   return (
     <View style={{ margin: 20, alignItems: 'center' }}>

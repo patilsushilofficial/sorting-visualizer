@@ -1,23 +1,26 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { View, StyleSheet } from 'react-native';
 
 const BAR_WIDTH = 25;
+const BAR_SCALE = 5;
 
 const SortingVisualizer = ({ array }) => {
-  return (
-    <View style={styles.container}>
-      {array.map((value, index) => (
-        <View
-          key={index}
-          style={{
-            ...styles.bar,
-            height: value * 5, // scale height for better visualization
+  const bars = useMemo(() => {
+    return array.map((value, index) => (
+      <View
+        key={index}
+        style={[
+          styles.bar,
+          {
+            height: value * BAR_SCALE,
             width: BAR_WIDTH,
-          }}
-        />
-      ))}
-    </View>
-  );
+          },
+        ]}
+      />
+    ));
+  }, [array]);
+
+  return <View style={styles.container}>{bars}</View>;
 };
 
 const styles = StyleSheet.create({
@@ -33,4 +36,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default SortingVisualizer;
+export default React.memo(SortingVisualizer);
