@@ -14,8 +14,6 @@ Experience the magic of sorting algorithms come to life! This interactive projec
   - Quick Sort
   - Merge Sort
   - And more!
-- 🎛️ Customizable array size and sorting speed
-- 🔍 Step-by-step visualization option for detailed analysis
 
 ## 🏁 Getting Started
 
@@ -26,10 +24,9 @@ Experience the magic of sorting algorithms come to life! This interactive projec
 
 ## 🎮 How to Use
 
-1. Choose your preferred sorting algorithm from the dropdown menu
-2. Adjust array size and sorting speed to your liking
-3. Hit 'Sort' and watch the visualization begin!
-4. Use 'Reset' to generate a fresh random array and start over
+1. Choose your preferred sorting algorithm
+2. Hit 'Sort' and watch the visualization begin!
+3. Use 'Reset' to generate a fresh random array and start over
 
 ## 🤝 Contributing
 
